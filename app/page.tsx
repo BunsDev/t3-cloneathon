@@ -14,6 +14,9 @@ import {
   Zap,
   Sparkles,
   CloudUploadIcon,
+  GlobeIcon,
+  KeyIcon,
+  SmartphoneIcon,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -213,6 +216,44 @@ export default function HomePage() {
                     <span className="text-sm">Required</span>
                   </div>
                 </div>
+
+                <div>
+                  <div className="flex items-start gap-3 mb-2">
+                    <GlobeIcon className="w-6 h-6 text-white/70 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-white text-lg font-medium">
+                        Browser Friendly
+                      </h4>
+                      <p className="text-white/50">
+                        {
+                          "As much as we'd like to, we can't realistically get everyone's native apps set up"
+                        }
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 text-white/70 ml-9">
+                    <CheckCircle className="w-4 h-4" />
+                    <span className="text-sm">Required</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="flex items-start gap-3 mb-2">
+                    <Zap className="w-6 h-6 text-white/70 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-white text-lg font-medium">
+                        Easy to Try
+                      </h4>
+                      <p className="text-white/50">
+                        We need an easy way to try out what you've built!
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 text-white/70 ml-9">
+                    <CheckCircle className="w-4 h-4" />
+                    <span className="text-sm">Required</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -264,9 +305,19 @@ export default function HomePage() {
                     desc: "Integrate real-time web search",
                   },
                   {
+                    icon: KeyIcon,
+                    title: "Bring Your Own Key",
+                    desc: "Use your own API keys",
+                  },
+                  {
+                    icon: SmartphoneIcon,
+                    title: "Mobile App",
+                    desc: "Why not ship mobile and web?",
+                  },
+                  {
                     icon: Sparkles,
-                    title: "Your Feature Ideas",
-                    desc: "Implement creative features of your own",
+                    title: "Anything Else",
+                    desc: "Get creative - we love unique ideas :)",
                   },
                 ].map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
@@ -388,6 +439,81 @@ export default function HomePage() {
                 <p className="text-white/90">
                   <strong>Content Usage:</strong> Theo might use your submission
                   for content btw
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="mb-20">
+          <h2 className="text-4xl font-bold text-white text-center mb-12">
+            Frequently Asked Questions (FAQ)
+          </h2>
+
+          <div className="max-w-4xl mx-auto bg-white/5 border border-white/10 rounded-xl p-8">
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-white font-semibold text-lg mb-2">
+                  Can I submit work that I started before the competition
+                  started?
+                </h3>
+                <p className="text-white/70">
+                  Yes, absolutely. As long as it is fully open source, you can
+                  use whatever you've built in the past (we will judge it harder
+                  though)
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-white font-semibold text-lg mb-2">
+                  Inference is expensive, can I require bringing your own key?
+                </h3>
+                <p className="text-white/70">
+                  Absolutely fine - just make sure that OpenRouter is one of the
+                  BYOK options (makes testing much easier for us)
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-white font-semibold text-lg mb-2">
+                  Does it have to be a 1 to 1 T3 Chat clone?
+                </h3>
+                <p className="text-white/70">
+                  No! The more creative the better, but feel free to clone as
+                  well. Just, uh, make sure it's clear that it's not the ACTUAL
+                  T3 Chat
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-white font-semibold text-lg mb-2">
+                  Do I have to build a web app?
+                </h3>
+                <p className="text-white/70">
+                  Web apps make things significantly easier for our judges to
+                  check out. If you ALSO build a mobile app and have an easy way
+                  for us to test it via TestFlight, we might check it out
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-white font-semibold text-lg mb-2">
+                  Do all team members have to be 18+?
+                </h3>
+                <p className="text-white/70">
+                  {
+                    "As long as the submitter is 18+ and can file the required paperwork upon winning, all is good :)"
+                  }
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-white font-semibold text-lg mb-2">
+                  Can I vibe code my submission?
+                </h3>
+                <p className="text-white/70">
+                  Sure, but, uh...good luck with that.
                 </p>
               </div>
             </div>
